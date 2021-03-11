@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Order.js check getDate 1`] = `""`;
+
+exports[`Order.js empty props 1`] = `""`;
+
+exports[`Order.js render with items 1`] = `
+<div
+  className="Order"
+>
+  <div
+    className="Order-header"
+  >
+    <span
+      className="Order-shop"
+    >
+      a
+    </span>
+    <span
+      id="date"
+    />
+  </div>
+  <div
+    className="Order-items"
+  >
+    <div
+      className="Order-item"
+      key="0"
+    >
+      item1
+    </div>
+    <div
+      className="Order-item"
+      key="1"
+    >
+      item2
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Order.js render without items 1`] = `
+<div
+  className="Order"
+>
+  <div
+    className="Order-header"
+  >
+    <span
+      className="Order-shop"
+    >
+      a
+    </span>
+    <span
+      id="date"
+    />
+  </div>
+  <div
+    className="Order-items"
+  />
+</div>
+`;
+
+exports[`Order.js shop and date are null 1`] = `""`;
+
+exports[`Order.js shop and date are null 2`] = `""`;
