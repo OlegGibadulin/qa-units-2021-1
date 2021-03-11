@@ -18,7 +18,9 @@ exports[`Order.js render with items 1`] = `
     </span>
     <span
       id="date"
-    />
+    >
+      1 12 2020
+    </span>
   </div>
   <div
     className="Order-items"
@@ -53,7 +55,9 @@ exports[`Order.js render without items 1`] = `
     </span>
     <span
       id="date"
-    />
+    >
+      1 12 2020
+    </span>
   </div>
   <div
     className="Order-items"
@@ -62,5 +66,3 @@ exports[`Order.js render without items 1`] = `
 `;
 
 exports[`Order.js shop and date are null 1`] = `""`;
-
-exports[`Order.js shop and date are null 2`] = `""`;

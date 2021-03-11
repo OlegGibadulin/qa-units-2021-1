@@ -8,17 +8,21 @@ import Order from './Order';
 
 configure({adapter: new Adapter()});
 
-import getDate from '../utils/getDate'
-jest.mock(getDate)
+import {getDate} from '../utils/getDate'
+jest.mock('../utils/getDate')
 
 describe('Order.js', () => {
-  it('empty props', () => {
-    const wrapper = shallow(<Order/>);
-    expect(toJson(wrapper)).toMatchSnapshot();
+  beforeEach(() => {
+      getDate.mockReturnValue('1 12 2020')
+      getDate.mockClear();
   });
 
-  it('shop and date are null', () => {
-    const wrapper = shallow(<Order order={{shop: null, date: null}} />);
+  afterEach(() => {
+      jest.resetModules()
+  })
+
+  it('empty props', () => {
+    const wrapper = shallow(<Order/>);
     expect(toJson(wrapper)).toMatchSnapshot();
   });
 
