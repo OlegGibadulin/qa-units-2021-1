@@ -5,12 +5,12 @@ import {sortOrders, getSortFunction, sortByItemCount, sortByDate, sortTypes} fro
 describe('sortOrders function', () => {
 	it('orders are null', () => {
 		const result = sortOrders(null, sortByDate);
-		expect(result).toEqual(undefined);
+		expect(result).toBeUndefined();
 	});
 
 	it('orders are empty', () => {
 		const result = sortOrders([], sortByDate);
-		expect(result).toEqual(undefined);
+		expect(result).toBeUndefined();
 	});
 
 	it('sortFunction is null', () => {
@@ -21,7 +21,7 @@ describe('sortOrders function', () => {
 			},
 		]
 		const result = sortOrders(orders, null);
-		expect(result).toEqual(undefined);
+		expect(result).toBeUndefined();
 	});
 
 	it('sortFunction is not function', () => {
@@ -32,39 +32,7 @@ describe('sortOrders function', () => {
 			},
 		]
 		const result = sortOrders(orders, 0);
-		expect(result).toEqual(undefined);
-	});
-
-	it('sort orders by date', () => {
-		const orders = [
-			{
-				items: ['item1', 'item2', 'item3'],
-				date: new Date('December 1, 2020 00:00:00'),
-			},
-			{
-				items: ['item1', 'item2'],
-				date: new Date('December 3, 2020 00:00:00'),
-			},
-		]
-		const expected = orders.sort(sortByDate);
-		sortOrders(orders, sortByDate);
-		expect(orders).toEqual(expected);
-	});
-
-	it('sort orders by items', () => {
-		const orders = [
-			{
-				items: ['item1', 'item2', 'item3'],
-				date: new Date('December 3, 2020 00:00:00'),
-			},
-			{
-				items: ['item1', 'item2'],
-				date: new Date('December 4, 2020 00:00:00'),
-			},
-		]
-		const expected = orders.sort(sortByItemCount);
-		sortOrders(orders, sortByItemCount);
-		expect(orders).toEqual(expected);
+		expect(result).toBeUndefined();
 	});
 });
 
@@ -82,7 +50,7 @@ describe('getSortFunction function', () => {
 
 	it('sort type is null', () => {
 		const result = getSortFunction(null);
-		expect(result).toEqual(undefined);
+		expect(result).toBeUndefined();
 	});
 });
 
